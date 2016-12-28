@@ -1,0 +1,46 @@
+import java.io.*;
+
+class Prime
+{
+  public static void main( String args[] )
+  {
+    
+    
+    String inputFile = "primes.txt";
+    String outputFile = "output.txt";
+    
+    File file = new File(outputFile);          
+    file.delete();       
+    
+    try {
+      FileWriter out = new FileWriter(outputFile, true);               
+      
+      
+      int x, y;
+    for( x = 3; x < 34000000; x++ )
+    {
+      
+      
+        for( y = 2; y <= x / 2; y++ )
+        {
+          if( x % y == 0 )
+          {
+            break;
+          }   
+        }
+ 
+        if( y > x / 2 )
+        {
+          //System.out.println(x + ",");
+          out.write(x + ",");
+        }
+      
+    }
+    }
+    catch(java.io.IOException e) { System.out.println(" nope "); }
+    
+    
+    
+      
+  }    
+}

@@ -1,0 +1,27 @@
+import java.io.*;
+import java.util.*;
+
+
+
+public class Problem20 {
+
+  
+  public static void go() {
+    double sqrt = 1.4142135623730950488016887242097;
+    
+    for (long i=1000000000000; i<999999999999999; i++) {
+      long b = (int) (i / sqrt);
+      long b2 = b - 1;
+      
+      long numerator = b * b2;
+      long denomenator = i * (i-1);
+      
+      if (2 * numerator = denomenator)
+        System.out.println("Found it: " + b);
+    }
+  }
+  
+  public static void main(String[] args) {  go(); }
+  
+  
+}

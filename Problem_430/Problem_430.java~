@@ -1,0 +1,32 @@
+import java.util.*; import java.math.*;
+
+public class Problem_430
+{
+  
+  public static double Get_P(long i, long n)
+  {
+    return (double) (((i - 1) * (i - 1)) + ((n - i) * (n - i))) / (n * n);
+  }
+  
+  public static double Get_Probability(long i, long n, int r)
+  {
+    double p = Get_P(i, n);
+    double q = 1 - p;
+    return (.5) * (1 + Math.pow(q - p, r));
+  }
+  
+  
+    
+  public static void main(String args[])
+  {
+    long n = 10000000000L;
+    int r = 4000;
+    double sum = 0;
+    
+    for (long i=1; i<=n; i++)
+    {
+      sum += Get_Probability(i, n, r);
+    }
+    System.out.println(sum);
+  }
+}

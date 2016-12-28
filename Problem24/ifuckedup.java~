@@ -1,0 +1,44 @@
+import java.io.*;
+import java.util.*;
+
+
+
+public class ifuckedup {
+  
+  private static int[] number;
+  private static int length;
+  
+  public static void go() {
+      
+      int numValid = 0;
+      for (int i=0123456789; i<987654321; i++) {
+          
+          if (isValid(i)) {
+              System.out.println(i + " is valid");
+              numValid++;
+          }
+          
+          if (numValid == 1000000)
+              System.out.println(i);
+      }
+  }
+  
+  public static Boolean isValid(int num) {
+      int[] temp = new int[10];
+      String snum = num.toString();
+      
+      for (int i=0; i<10; i++) {
+          temp[ Integeter.getInt(snum.charAt(i)) ]++;
+      }
+      
+      for (int i=0; i<10; i++) {
+          if (temp[i] != 1)
+              return false;
+      }
+      
+      return true;
+  }
+  
+  public static void main(String[] args) {  go(); }
+  
+}

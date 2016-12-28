@@ -1,0 +1,20 @@
+import java.util.*;
+import java.io.*;
+
+public class Problem4 {
+    
+    public static void go() {
+    }
+    
+    public Boolean isPal(Sring num) {
+        if (num.length() == 0 || num.length() == 1)
+            return true;
+        else {
+            if (num.charAt(0).equals(num.charAt(num.length()-1)))
+                return isPal(num.substring(1, num.length()-1));
+            else
+                return false;
+        }
+    }
+}
+        

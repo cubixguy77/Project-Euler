@@ -1,0 +1,15 @@
+import java.util.*;
+import java.io.*;
+
+public class Problem19 {
+  
+  private static int [] days;
+  
+  public static void go() {
+    
+  }
+  
+  public static void main(String[] args) {
+    go();
+  }
+}

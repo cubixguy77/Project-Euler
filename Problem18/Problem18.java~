@@ -1,0 +1,11 @@
+import java.io.*;
+import java.util.*;
+
+
+public class Problem18 {
+    
+    public static void go() {
+        
+    }
+    
+}

@@ -1,0 +1,73 @@
+import java.util.*;
+import java.io.*;
+
+public class Problem19 {
+    
+    private static int [] days;
+    
+    public static void go() {
+        days = new int[12];
+        days[0] = 31;
+        days[1] = 28;
+        days[2] = 31;
+        days[3] = 30;
+        days[4] = 31;
+        days[5] = 30;
+        days[6] = 31;
+        days[7] = 31;
+        days[8] = 30;
+        days[9] = 31;
+        days[10] = 30;
+        days[11] = 31;
+        
+        int day = 1;
+        int month = 0;
+        int year = 1901;
+        
+        int numSunday = 0;
+        int dayofweek = 2; // 1/1/1901 was a Tuesday
+        
+        while (! (day == 31 && month == 11 && year == 2000)) {
+            if (year >= 1904) {
+                System.out.println("Day: " + day + " " + dayofweek);
+                System.out.println("Month: " + month);
+                System.out.println("Year: " + year + "\n");
+            }
+            
+            if (day == 1 && dayofweek == 0) {
+                numSunday++;
+            }
+            
+            if (day >= days[month]) {
+                day = 1;
+                month++;
+            }
+            else {
+                day++;
+                dayofweek = (dayofweek + 1) % 7;
+            }
+            
+            if (month == 2 && leapYear(year)) {
+                day = 29;
+                month = 1;
+            }
+                
+            if (month == 12) {
+                month = 0;
+                day = 1;
+                year++;
+            }
+        }
+        
+        System.out.println(numSunday);
+    }
+    
+    public static Boolean leapYear(int year) {
+        return ( ( (year % 4 == 0) && !(year % 100 == 0) ) 
+              || ( (year % 100 == 0) && (year % 400 == 0) ) );
+    }
+    
+    public static void main(String[] args) {
+        go();
+    }
+}

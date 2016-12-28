@@ -1,0 +1,11 @@
+import java.util.*;
+import java.io.*;
+import java.util.Scanner;
+
+public class Problem15 {
+    
+    public static void go() {
+        
+    }
+    
+}

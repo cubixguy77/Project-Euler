@@ -1,0 +1,9 @@
+import java.util.*;
+import java.io.*;
+
+public class Problem12 {
+    
+    public static void go() {
+    }
+    
+}

@@ -1,0 +1,30 @@
+public class quickieas
+{
+   
+  /* index 0 is the rightmost digit */
+  public int getDigit(long n, int index)
+  {
+    return (int) (n / Math.pow(10, index)) % 10;
+  }
+  
+  public static long s(long n)
+  {
+    return (long) Math.pow(2, n);
+  }
+  
+ public static void main(String[] args)
+ {
+   
+   
+   
+   
+   
+   
+   
+   
+ }
+  
+  
+  
+  
+}
